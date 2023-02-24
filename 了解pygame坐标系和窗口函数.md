@@ -1,0 +1,21 @@
+# 小节目标：
+1. 游戏的初始化和退出
+2. 理解游戏中的坐标系
+3. 创建游戏的主窗口
+4. 简单的游戏循环
+
+## 1.1 游戏的初始化和退出
++ 使用pygam提供功能之前，学会使用init方法
++ 游戏结束之前要调用一下quit方法，用于卸载所有pycharm模块
+
+## 1.2 pygame的坐标系
++ 以游戏窗口的左上角为坐标的原点
++ 游戏中的元素都是以矩形来描述位置的（x,y）width height
++ pygame提供了一个类 pygame.Rest 用于描述矩形区域 Rest(x,y,width,height)->Rest,同时Rest也封装了一个属性，这个属性是size，包含了width和height,使用pygame.Rest.size即可输出矩形区域的尺寸。
+
+## 1.3 创建游戏的主窗口
++ pygame专门提供了一个模块 pygame.display 用于创建，管理游戏窗口
++ 方法：pygame.display.set_mode(): 初始化游戏显示窗口， 
+	   pygame.display.update(): 刷新屏幕内容
++ set_mode(resolution=(0,0), flags=0, depth=0) -> surface 返回的结果就是一个主窗口，需要用surface来得到set_mode的返回值 
++ resolution是用于指定屏幕宽和高，flags指定屏幕的附加选项，用于指定是否全屏。depth 表示颜色的位数
